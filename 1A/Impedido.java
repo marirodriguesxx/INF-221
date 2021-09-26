@@ -2,6 +2,12 @@ package trabalho1;
 
 public class Impedido {
 	
+	public boolean getImpedido(int[] atacantestogol, int[] defensorestogol){
+        if( atacantestogol[0] < defensorestogol[1] ){ return true; }
+        else { return false; }
+	}
+	
+	
 	public void impedidos(int atacantes, int defensores, int[] atacantestogol, int[] defensorestogol) {
        
 		//executando o bubble sort para verificar a distância dos atacantes e defensores ate o gol
@@ -24,7 +30,7 @@ public class Impedido {
             }
         }
         
-        if( atacantestogol[0] < defensorestogol[1] ){ System.out.println("Y"); return; }
+        if( getImpedido(atacantestogol, defensorestogol)){ System.out.println("Y"); return; }
         else { System.out.println("N");return; }
 
 	}

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] arq) {
 		int atacantes =-1;
 		int defensores =-1;
 		int atacantestogol[] = null;
