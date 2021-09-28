@@ -1,6 +1,16 @@
 
 public class Resultados {
 	
+	public String respostacorreta(int[] vencedores){
+		String resp = "";
+		for(int i=0; i<vencedores.length-1; i++) {
+			//System.out.println(vencedores[i]);		
+			resp += Integer.toString(vencedores[i]) + " ";
+		}
+		
+		return resp;		
+	}
+	
 	//retorna o cesta average do melhor time
 	public int[] solve(int num_time, int jogadas, int[][] resultados){ 
 		int[] listaganhadores = new int [num_time+1];

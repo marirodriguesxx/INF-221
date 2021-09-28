@@ -65,14 +65,12 @@ public class Main {
 				resultados[jogos[i][2]][4] = jogos[i][2];
 			}
 		}
-		int[] vencedores = new int [num_times];
-		String resp = "";
+		int[] vencedores = new int [num_times+1];
 		Resultados results = new Resultados();
 		vencedores = results.solve(num_times, jogadas, resultados);	
-		for(int i=0; i<vencedores.length-1; i++) {		
-			resp += Integer.toString(vencedores[i]) + " ";
-		}
+		String resp = results.respostacorreta(vencedores);
 		System.out.println(resp);
+		
 		// For para verificar se o preenchimento ocorreu corretamente...OK
 		/*for(int i=0; i<resultados.length; i++) {
 			System.out.println("resultado do time " + i);
